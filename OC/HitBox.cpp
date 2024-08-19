@@ -125,14 +125,14 @@ void HitBox::HitFlg()
 
 void HitBox::Update()
 {
-	MoveBox();
-	SpawnBox();
+	/*MoveBox();
+	SpawnBox();*/
 }
 
 void HitBox::Draw() const
 {
-	DrawBox(Box_X, Box_Y, Box_X2, Box_Y2, 0xffffff, FALSE);
-	DrawBox(Box2_X, Box2_Y, Box2_X2, Box2_Y2, 0xffffff, FALSE);
+	/*DrawBox(Box_X, Box_Y, Box_X2, Box_Y2, 0xffffff, FALSE);
+	DrawBox(Box2_X, Box2_Y, Box2_X2, Box2_Y2, 0xffffff, FALSE);*/
 
 }
 
