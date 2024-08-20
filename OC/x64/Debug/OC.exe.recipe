@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\pg\OC\x64\Debug\OC.exe</FullPath>
+      <FullPath>C:\run\OC\x64\Debug\OC.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

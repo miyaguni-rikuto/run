@@ -3,6 +3,8 @@
 #include"Player.h"
 #include"Floor.h"
 #include"HitBox.h"
+#include"StageBack.h"
+
 class GameMain :
     public AbstractScene
 {
@@ -24,5 +26,6 @@ public:
     Player* player;
     Floor* floor;
     HitBox* hitbox;
+    StageBack* stageback;
 };
 

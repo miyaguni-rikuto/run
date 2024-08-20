@@ -1,1 +1,2 @@
 C:\pg\OC\x64\Debug\OC.exe
+C:\run\OC\x64\Debug\OC.exe
