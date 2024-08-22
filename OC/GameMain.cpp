@@ -31,6 +31,7 @@ void GameMain::Init()
     Fleez2[0] = 330;
     Fleez2[1] = 390;
    
+   
 }
 
 
@@ -53,6 +54,7 @@ void GameMain::Player()
         PlayerY -= 5;
     }
 
+    //
 }
 
 
@@ -80,7 +82,7 @@ AbstractScene* GameMain::Update()
 {
    /* SCORE();*/
     Player();
-   /* a++;
+ /*   a++;
     if (a >= 120) {
         FleezFlg = TRUE;
         Fleez();
