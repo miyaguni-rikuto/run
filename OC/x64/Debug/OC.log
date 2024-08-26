@@ -1,28 +1,22 @@
-﻿2024/08/21 13:36:38 にビルドを開始しました。
+﻿2024/08/26 13:59:46 にビルドを開始しました。
 ログの詳細度は次のように設定されています: Normal。     1>ノード 2 上のプロジェクト "C:\run\OC\OC.vcxproj" (Build ターゲット)。
      1>InitializeBuildStatus:
-         "AlwaysCreate" が指定されたため "x64\Debug\OC.tlog\unsuccessfulbuild" を作成しています。
+         "x64\Debug\OC.tlog\unsuccessfulbuild" のタッチ タスクを実行しています。
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64\CL.exe /c /I"C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用" /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _WINDOWS /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt GameMain.cpp
-         GameMain.cpp
-     1>C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxFunctionWin.h(276,1): warning C4010: 単一行コメント (//) に、行連結文字があります。
-     1>C:\run\OC\GameMain.cpp(58,38): warning C4305: '=': 'int' から 'bool' へ切り詰めます。
-     1>C:\run\OC\GameMain.cpp(58,22): error C2106: '=': 左のオペランドが、左辺値になっていません。
-     1>プロジェクト "C:\run\OC\OC.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
+         すべての出力が最新のものです。
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\run\OC\x64\Debug\OC.exe" /INCREMENTAL /ILK:"x64\Debug\OC.ilk" /NOLOGO /LIBPATH:"C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\run\OC\x64\Debug\OC.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\run\OC\x64\Debug\OC.lib" /MACHINE:X64 x64\Debug\FpsControl.obj
+         x64\Debug\GameMain.obj
+         x64\Debug\main.obj
+         x64\Debug\SceneManager.obj
+         OC.vcxproj -> C:\run\OC\x64\Debug\OC.exe
+       FinalizeBuildStatus:
+         ファイル "x64\Debug\OC.tlog\unsuccessfulbuild" を削除しています。
+         "x64\Debug\OC.tlog\OC.lastbuildstate" のタッチ タスクを実行しています。
+     1>プロジェクト "C:\run\OC\OC.vcxproj" (Build ターゲット) のビルドが完了しました。
 
-ビルドに失敗しました。
+ビルドに成功しました。
+    0 個の警告
+    0 エラー
 
-       "C:\run\OC\OC.vcxproj" (Build ターゲット) (1) ->
-       (ClCompile ターゲット) -> 
-         C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxFunctionWin.h(276,1): warning C4010: 単一行コメント (//) に、行連結文字があります。
-         C:\run\OC\GameMain.cpp(58,38): warning C4305: '=': 'int' から 'bool' へ切り詰めます。
-
-
-       "C:\run\OC\OC.vcxproj" (Build ターゲット) (1) ->
-       (ClCompile ターゲット) -> 
-         C:\run\OC\GameMain.cpp(58,22): error C2106: '=': 左のオペランドが、左辺値になっていません。
-
-    2 個の警告
-    1 エラー
-
-経過時間 00:00:00.52
+経過時間 00:00:00.63

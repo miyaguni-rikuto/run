@@ -37,29 +37,26 @@ void GameMain::DrawBackImg()
 
 void GameMain::CreateKumo()
 {
-    if (KEY_INPUT_D) {
-        KumoX--;
-    }
+    KumoX -= 2;
+
     if (KumoX < -290) {
         KumoX = 1280;
-        KumoY = GetRand(200);
+        KumoY = GetRand(150)+50;
     }
     
 }
 
 void GameMain::CreateFloor()
 {
-  
+    FloorX -= 5;
+    FloorX2 -= 5;
 
-    if (FloorX > 340 && FloorX2 > 740) {
-        FloorX--;
-        FloorX2--;
+    if (FloorX2 < 0) {
+        FloorX = 1280;  // 床を画面の右端に再配置
+        FloorX2 = FloorX + 200; // 固定の幅を持つ新しい床 (例: 100ピクセル)
+        FloorY = GetRand(200)+400;  // 固定のY座標
+        FloorY2 = FloorY + 50; // 固定の高さ (例: 50ピクセル)
     }
-    if (FloorX = 340 && FloorX2 = 740) {
-        FloorX++;
-        FloorX2++;
-    }
-    
 }
 
 void GameMain::Draw() const
