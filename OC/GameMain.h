@@ -8,19 +8,22 @@ class GameMain :
 private:
     //スコア
     int Score;
-
-   
+    int a;
+    int c;
     //プレイヤー
     int PlayerX;
     int PlayerY;
     int PlayerHP;
+    int PlayerAirTime;
     bool PlayerJump;
 
     //フリーズ
     bool FleezFlg;
     int Fleez1[2];
     int Fleez2[2];
-    int a;
+    int FleezSE;
+    int FleezSE2;
+    int FleezTime;
     
 
     //AED

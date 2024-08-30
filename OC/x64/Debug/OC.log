@@ -1,1 +1,3 @@
-﻿  OC.vcxproj -> C:\Users\KBC12206200\Desktop\授業資料\Kojin_2024_7_06\run\OC\x64\Debug\OC.exe
+﻿  GameMain.cpp
+C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxFunctionWin.h(276,1): warning C4010: 単一行コメント (//) に、行連結文字があります。
+  OC.vcxproj -> C:\Users\KBC12206200\Desktop\授業資料\Kojin_2024_7_06\run\OC\x64\Debug\OC.exe
