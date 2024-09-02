@@ -5,6 +5,16 @@
 class GameMain :
     public AbstractScene
 {
+public:
+    int BackImg[3];
+    int KumoImg;
+    int KumoX;
+    int KumoY;
+    int FloorX;
+    int FloorY;
+    int FloorX2;
+    int FloorY2;
+
 private:
     //スコア
     int Score;
@@ -51,7 +61,11 @@ public:
 
 
     void Draw() const override;
-   
 
+    void DrawBackImg();
+
+    void CreateKumo();
+   
+    void CreateFloor();
 };
 
