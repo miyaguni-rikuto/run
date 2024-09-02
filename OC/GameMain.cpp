@@ -57,7 +57,7 @@ void GameMain::Player()
 {
     //重力
     if (PlayerY < 400&& PlayerJump == TRUE/* && CheckHitKey(KEY_INPUT_SPACE) == 0*/){
-        PlayerY += 10;
+        PlayerY += 20;
     }
 
     //ジャンプ
@@ -66,7 +66,7 @@ void GameMain::Player()
             PlayerAirTime+=1;
             PlayerY -= 20;
 
-            if (PlayerAirTime == 10) {
+            if (PlayerAirTime == 20) {
                 PlayerJump = TRUE;
             }
 
