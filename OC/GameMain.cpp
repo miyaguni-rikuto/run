@@ -60,11 +60,12 @@ void GameMain::Init()
 
 void GameMain::SCORE()
 {
-    Score++;
-    if (Score == 2400)
-    {
-        FleezFlg = TRUE;
-    }
+    /* Score++;
+     if (Score == 2400)
+     {
+         FleezFlg = TRUE;
+     }
+ }*/
 }
 
 
