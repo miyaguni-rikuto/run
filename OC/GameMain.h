@@ -55,7 +55,7 @@ public:
 
     void Fleez();
 
-    
+    void Hit();
 
     AbstractScene* Update() override;
 

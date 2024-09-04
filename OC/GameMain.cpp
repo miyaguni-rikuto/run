@@ -11,16 +11,11 @@ GameMain::GameMain()
     FleezTime = 0;
     Score = 2000;
 
-}
-
-
-GameMain::~GameMain()
-{
     BackImg[0] = LoadGraph("source/img/Hiru.jpg");
     BackImg[1] = LoadGraph("source/img/Yu.png");
     BackImg[2] = LoadGraph("source/img/Yoru.jpg");
     KumoImg = LoadGraph("source/img/kumo.png");
-   
+
 
     KumoX = 0;
     KumoY = 10;
@@ -29,6 +24,13 @@ GameMain::~GameMain()
     FloorY = 300;
     FloorX2 = 700;
     FloorY2 = 350;
+
+}
+
+
+GameMain::~GameMain()
+{
+   
 }
 
 
@@ -76,14 +78,12 @@ void GameMain::Player()
     //ジャンプ
     if (PlayerY < 720 && CheckHitKey(KEY_INPUT_SPACE) == 1&& PlayerJump == FALSE) {
         
+        PlayerJump = FALSE;
             PlayerAirTime+=1;
             PlayerY -= 20;
-
             if (PlayerAirTime == 20) {
                 PlayerJump = TRUE;
             }
-
-        
       
     }
 
@@ -130,12 +130,37 @@ void GameMain::Fleez()
 }
 
 
+void GameMain::Hit()
+{
+    if (PlayerY + 70 == FloorY && PlayerX + 50 >= FloorX && PlayerX <= FloorX2 )
+    {
+        PlayerJump = FALSE;
+    }
+    else {
+       PlayerY = PlayerY + 20;
+    }
+}
+
+
 AbstractScene* GameMain::Update()
 {
     CreateKumo();
     CreateFloor();
+    if (c == 1) {
+        ChangeVolumeSoundMem(70, a);
+        PlaySoundMem(a, DX_PLAYTYPE_BACK);
+    }
+    c++;
+
+    if (FleezFlg == FALSE) {
+        SCORE();
+        Player();
+
+    }
+    Fleez();
     return this;
 }
+
 
 void GameMain::DrawBackImg()
 {
@@ -154,6 +179,7 @@ void GameMain::CreateKumo()
     
 }
 
+
 void GameMain::CreateFloor()
 {
     FloorX -= 5;
@@ -165,19 +191,8 @@ void GameMain::CreateFloor()
         FloorY = GetRand(200)+400;  // 固定のY座標
         FloorY2 = FloorY + 50; // 固定の高さ (例: 50ピクセル)
     }
-    if (c == 1) {
-        ChangeVolumeSoundMem(70, a);
-        PlaySoundMem(a, DX_PLAYTYPE_BACK);
-    }
-    c++;
+ 
     
-    if (FleezFlg == FALSE) {
-        SCORE();
-        Player();
-       
-    }
-    Fleez();
-    return this;
 }
 
 
@@ -189,13 +204,15 @@ void GameMain::Draw() const
     DrawBox(0, 0, 1280, 720, 0x00BFFF, TRUE);
 
 
+    DrawGraph(0, 0, BackImg[0], TRUE);
+    DrawGraph(KumoX, KumoY, KumoImg, TRUE);
+
+    DrawBox(FloorX, FloorY, FloorX2, FloorY2, 0xffffff, TRUE);
 
 
 
+    //Player
     DrawBox(PlayerX,PlayerY,PlayerX+50,PlayerY+70, 0xffffff, FALSE);
-   
-
-
   
     //UI
     DrawBox(0, 620, 1280, 720, 0xFF0000, TRUE);
@@ -242,10 +259,7 @@ void GameMain::Draw() const
         {
             DrawBox(0, 0, 1280, 720, 0xffffff, TRUE);
 
-    DrawGraph(0, 0, BackImg[0], TRUE);
-    DrawGraph(KumoX, KumoY, KumoImg, TRUE);
-
-    DrawBox(FloorX, FloorY, FloorX2, FloorY2, 0xffffff, TRUE);
+    
         }*/
     }
 }
