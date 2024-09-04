@@ -14,6 +14,10 @@ public:
     int FloorY;
     int FloorX2;
     int FloorY2;
+    int FloorX3;
+    int FloorY3;
+    int FloorX4;
+    int FloorY4;
 
 private:
     
