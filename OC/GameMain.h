@@ -27,13 +27,7 @@ private:
     int PlayerAirTime;
     bool PlayerJump;
 
-    //フリーズ
-    bool FleezFlg;
-    int Fleez1[2];
-    int Fleez2[2];
-    int FleezSE;
-    int FleezSE2;
-    int FleezTime;
+  
     
 
     //AED
@@ -53,7 +47,7 @@ public:
 
     void Player();
 
-    void Fleez();
+ 
 
     void Hit();
 
