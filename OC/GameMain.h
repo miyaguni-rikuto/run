@@ -7,6 +7,9 @@ class GameMain :
 {
 public:
     int BackImg[3];
+    int CharaImg;
+    int CharaImgX;
+    int CharaImgY;
     int KumoImg;
     int KumoX;
     int KumoY;
@@ -14,6 +17,10 @@ public:
     int FloorY;
     int FloorX2;
     int FloorY2;
+
+    int  previousFloorX;
+
+
 
 private:
     //スコア
